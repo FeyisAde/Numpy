@@ -5,6 +5,8 @@
 
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 
+new_list = [int(num) for num in numbers if num > 0]
+print(new_list)
 
 
 
@@ -13,6 +15,8 @@ numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 sentence = "the quick brown fox jumps over the lazy dog"
 words = sentence.split()
 
+word_len = [int(len(word)) for word in words if word != "the"]
+
 
 ## 3 Given dictionary is consisted of vehicles and their weights in kilograms. 
 ## Contruct a list of the names of vehicles with weight below 5000 kilograms. 
@@ -20,3 +24,5 @@ words = sentence.split()
 dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, 
 "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
 
+vehicle_list = [key.upper() for key in dict if dict[key] < 5000]
+print(vehicle_list)
